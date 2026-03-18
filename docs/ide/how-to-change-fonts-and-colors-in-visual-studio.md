@@ -309,6 +309,91 @@ For more information about features, products, and services that make Windows mo
 
 The accessibility information included on this page might apply only to users who license Microsoft products in the United States. If you obtained this product outside of the United States, visit the [Microsoft Accessibility](https://www.microsoft.com/accessibility/) website for a list of Microsoft support services telephone numbers and addresses. You can contact your subsidiary to find out whether the type of products and services described on this page are available in your area. Information about accessibility is also available in other languages.
 
+::: moniker range="visualstudio"
+
+### Using Visual Studio 2017 colorization in Visual Studio 2026
+
+Visual Studio 2026 removed the color scheme selector from the C# / VB.NET advanced settings page and now every theme is getting the enhanced semantic colors introduced in 2019. Follow the steps below to return to Visual Studio 2017 colors.
+
+1. Choose the code below which matches your preferred theme and copy it into a file called `.vssettings`.
+
+   **Dark Theme**
+   
+   ```
+   <UserSettings>
+   	<ApplicationIdentity version="18.0"/>
+   	<ToolsOptions>
+   		<ToolsOptionsCategory name="Environment" RegisteredName="Environment"/>
+   	</ToolsOptions>
+   	<Category name="Environment_Group" RegisteredName="Environment_Group">
+   		<Category name="Environment_FontsAndColors" Category="{1EDA5DD4-927A-43a7-810E-7FD247D0DA1D}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_FontsAndColors" PackageName="CVsShellPackage">
+   			<PropertyValue name="Version">2</PropertyValue>
+   			<FontsAndColors Version="2.0">
+   				<Theme Id="{1DED0138-47CE-435E-84EF-9EC1F439B749}"/>
+   				<Categories>
+   					<Category GUID="{75A05685-00A8-4DED-BAE5-E7A50BFA929A}">
+   						<Items>
+   							<Item Name="extension method name" Foreground="0x00DCDCDC" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="method name" Foreground="0x00DCDCDC" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="parameter name" Foreground="0x00DCDCDC" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="local name" Foreground="0x00DCDCDC" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="struct name" Foreground="0x00B0C94E" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="operator - overloaded" Foreground="0x00DCDCDC" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="keyword - control" Foreground="0x00D69C56" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   						</Items>
+   					</Category>
+   				</Categories>
+   			</FontsAndColors>
+   		</Category>
+   	</Category>
+   </UserSettings>
+   ```
+
+   **Light Theme**
+   
+   ```
+   <UserSettings>
+   	<ApplicationIdentity version="18.0"/>
+   	<ToolsOptions>
+   		<ToolsOptionsCategory name="Environment" RegisteredName="Environment"/>
+   	</ToolsOptions>
+   	<Category name="Environment_Group" RegisteredName="Environment_Group">
+   		<Category name="Environment_FontsAndColors" Category="{1EDA5DD4-927A-43a7-810E-7FD247D0DA1D}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_FontsAndColors" PackageName="CVsShellPackage">
+   			<PropertyValue name="Version">2</PropertyValue>
+   			<FontsAndColors Version="2.0">
+   				<Theme Id="{DE3DBBCD-F642-433C-8353-8F1DF4370ABA}"/>
+   				<Categories>
+   					<Category GUID="{75A05685-00A8-4DED-BAE5-E7A50BFA929A}">
+   						<Items>
+   							<Item Name="extension method name" Foreground="0x00000000" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="method name" Foreground="0x00000000" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="parameter name" Foreground="0x00000000" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="local name" Foreground="0x00000000" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="operator - overloaded" Foreground="0x00000000" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   							<Item Name="keyword - control" Foreground="0x00FF0000" Background="0x01000001" BoldFont="No" StrikethroughFont="No" ItalicFont="No" UnderlineFont="No"/>
+   						</Items>
+   					</Category>
+   				</Categories>
+   			</FontsAndColors>
+   		</Category>
+   	</Category>
+   </UserSettings>
+   ```
+   
+1. Open Visual Studio 2026.
+   
+1. Click **Tools** > **Import and Export Settings**.
+   
+1. Choose **Import selected environment settings**.
+   
+1. Save your current settings if desired.
+   
+1. Browse to select the `.vssettings` file you created.
+   
+1. Enjoy your preferred colors!
+
+::: moniker-end ::: moniker range="vs-2026"
+
 ## Related content
 
 :::moniker range="visualstudio"
